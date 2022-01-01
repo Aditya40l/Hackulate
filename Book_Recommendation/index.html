@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Book Suggestions for Better Life Improvement</h1>
+
+        <div class="content">
+
+            <form id="add-book-form">
+                <input type="text" name="book" placeholder="Book name">
+                <input type="text" name="topic" placeholder="Topic">
+                <button>Add Book</button>
+            </form>
+
+            <ul id="book-list"></ul>
+
+        </div>
+
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDGplrSw830bJCTZs4zHAtlmz1aA1Gwxns",
+                authDomain: "ninja-firestore-tut-c6521.firebaseapp.com",
+                databaseURL: "https:// ninja-firestore-tut.firebaseio.com",
+                projectId: "ninja-firestore-tut-c6521",
+                storageBucket: "ninja-firestore-tut-c6521.appspot.com",
+                messagingSenderId: "889901334279",
+                appId: "1:889901334279:web:418c93d019aa3263990fa2",
+                measurementId: "G-4NVFWPWYQV"
+            };
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
